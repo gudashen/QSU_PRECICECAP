@@ -49,7 +49,7 @@ get_n_min_avg <- function(directory, full_time = T, time_window = NULL, time_bre
                                       means_time <- data.frame(full_field, full_window)
                                       colnames(means_time)[1:2] <- c(b[, 1], paste0(b[, 1], '_start'))
                                       EMS <- clinic[clinic$zSubjectID == subject_num, c('F502Q02', 'F502Q03', 'F502Q06', 'F502Q07')][1,]    ## get EMS info from clinical dataset for each patient
-                                      call_time <- as.POSIXct(paste(EMS$F502Q02, EMS$F502Q03), format = "%d%b%Y %H:%M:%S",
+                                      call_time <- as.POSIXct(paste(EMS$F502Q02, EMS$F502Q03), format = "%d%b%Y %H:%M:%S",    ## read EMS call/arrival time and reconcile timezones
                                                               tz = case_when(site_num %in% c('1753') ~ 'America/Chicago', 
                                                                              site_num %in% c('1125', '1435') ~ 'America/Los_Angeles', 
                                                                              T ~ 'America/New_York'))
