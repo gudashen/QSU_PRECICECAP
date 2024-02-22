@@ -1,4 +1,4 @@
-#Enable command line arguments
+## Enable command line arguments
 args = commandArgs(TRUE)
 job_index = as.numeric(args[1])
 
