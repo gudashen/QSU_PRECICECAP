@@ -192,7 +192,10 @@ get_n_min_avg <- function(path) {
      aggr_data
      }
 
+write_csv(get_n_min_avg(path), '/oak/stanford/groups/zihuai/precicecap_data_main/full_5min_avg', basename(path), '.csv') 
 
+
+                                                  
 
 ## first_hr_window <- get_n_min_avg('/oak/stanford/groups/zihuai/precicecap_data_main/', 1, 5, '/oak/stanford/groups/zihuai/precicecap_data_main/Clinic Data/Output/baseline_CRF.csv')
 
